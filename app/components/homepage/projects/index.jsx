@@ -6,6 +6,20 @@ import {useState} from 'react'
 
 const Projects = () => {
   const [filter, setFilter] = useState('All')
+  const filteredProjects = filter === "All"
+    ? projectsData.slice(0, 4)
+    : projectsData.filter((project) => project.categorie.includes(filter));
+  const renderProjectCard = (project, index) => (
+    <div
+      id={`sticky-card-${index + 1}`}
+      key={project.id}
+      className="sticky-card w-full mx-auto max-w-2xl sticky"
+    >
+      <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-500">
+        <ProjectCard project={project} />
+      </div>
+    </div>
+  );
   return (
     <div id='projects' className="relative z-50  my-12 lg:my-24">
       <div className="sticky top-10">
@@ -31,17 +45,7 @@ const Projects = () => {
           ))}
         </div>
         <div className="flex flex-col gap-6">
-          {projectsData.map((project, index) => (filter==="All" || project.categorie.includes(filter)) &&(
-            <div
-              id={`sticky-card-${index + 1}`}
-              key={project.id}
-              className="sticky-card w-full mx-auto max-w-2xl sticky"
-            >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                <ProjectCard project={project} />
-              </div>
-            </div>
-          ))}
+          {filteredProjects.map(renderProjectCard)}
         </div>
       </div>
     </div>

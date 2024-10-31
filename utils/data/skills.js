@@ -82,8 +82,10 @@ export const skillsGroupedByCategory = {
     "Python",
     "Java",
     "JavaScript",
+    "TypeScript",
     "C",
-    "C++"
+    "C++",
+    "C#" 
   ],
   "Testing": [
     "Cucumber",
@@ -102,7 +104,11 @@ export const skillsGroupedByCategory = {
     "Terraform",
     "Helm",
     "Grafana",
-    "Prometheus"
+    "Prometheus",
+    "ArgoCD",
+    "Jenkins",
+    "Azure", 
+    "AWS"
   ],
   "Data Engineering": [
     "Apache Airflow",
