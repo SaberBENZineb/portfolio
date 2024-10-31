@@ -8,8 +8,8 @@ const AnimationLottie = ({ animationPath, width }) => {
     autoplay: true,
     animationData: animationPath,
     style: {
-      width: '95%',
-    }
+      width: width || '95%',
+    },
   };
 
   return (

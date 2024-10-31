@@ -40,7 +40,7 @@ export { default as grafana } from './grafana.svg';
 export { default as helm } from './Helm.svg';
 export { default as junit } from './junit.svg';
 export { default as kubernetes } from './kubernets.svg';
-export { default as mocha } from './mocha.svg';
+export { default as mocha } from './Mocha.svg';
 export { default as spring } from './spring.svg';
 export { default as sonarqube } from './sonarQube.svg';
 export { default as scikit } from './Scikit-learn.svg';
